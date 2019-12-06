@@ -4,3 +4,6 @@
   border-radius: 4px;
   background: #fff;
 }
+.countries li {
+  padding: 25px;
+}
