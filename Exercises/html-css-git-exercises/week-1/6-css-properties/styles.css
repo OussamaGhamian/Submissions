@@ -1,1 +1,20 @@
 /* Add your CSS code below */
+a {
+  color: red;
+  font-weight: bold;
+  text-decoration: none;
+}
+.messages {
+  font-size: 0.9rem;
+}
+.message--unread {
+  border-left: blue 10px solid;
+}
+.message:first-child {
+  background-color: #ffffff;
+  opacity: 0.6;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+.message {
+  line-height: 25px;
+}
