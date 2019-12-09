@@ -1,6 +1,6 @@
 # Oussama AlGhamian
 
-## ![myImage](index.jpeg)
+![myImage](index.jpeg)
 
 ## Contact info:
 
