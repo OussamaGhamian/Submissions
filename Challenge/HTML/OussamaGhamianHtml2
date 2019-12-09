@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title></title>
+    <meta content="">
+    <style></style>
+    <link rel="stylesheet" type="text/css" href="Theme.css">
+  
+  </head>
+  <header><p>this is header</p></header>
+  <main>
+    <ol>
+      <p>FOOD:</p>
+      <li>shawerma</li>
+      <li>kabab</li>
+      <li>Mlokhia</li>
+      <li>Kebbeh</li>
+    </ol>
+    <img src="https://www.daleel-madani.org/sites/default/files/styles/organisation_logo_crop/public/logos/codi_logos-02.png?itok=TXH_YbvX&c=d1e8b326356a930c02c01d4b36c75553" alt="CodiLogo">
+    <ul>
+      Best students:
+      <li>Oussama</li>
+      <li>Oussama</li>
+      <li>Oussama</li>
+      <li>Oussama</li>
+      <li>Oussama</li>
+    </ul>
+  </main>
+  <footer>
+    <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=2ahUKEwjRo57kzKjmAhUNRhUIHRPJDnsQFjAAegQIAhAC&url=https%3A%2F%2Fcodi.tech%2F&usg=AOvVaw3CpH3ICLk-eZ2CT2WNxPXe ">visit codi</a>
+  </footer>
+</html>
