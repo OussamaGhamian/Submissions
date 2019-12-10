@@ -7,3 +7,17 @@
 }
 
 /* Add your own CSS code below */
+.countries--first li {
+  font-size: 15px;
+}
+.countries--second {
+  justify-content: center;
+  column-gap: 15px;
+}
+.countries--third {
+  flex-direction: column;
+}
+.countries--fourth {
+  flex-direction: column-reverse;
+  row-gap: 15px;
+}
