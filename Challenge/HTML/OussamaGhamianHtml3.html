@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      main,
+      header,
+      section,
+      aside,
+      footer {
+        margin: 0;
+        padding: rem-clac(20);
+        line-height: 25px;
+        color: #fff;
+        background-color: #212b2d;
+        font-size: 18px;
+      }
+      .main {
+        padding: 120px;
+      }
+
+      .content {
+        padding: 60px;
+      }
+
+      .footer {
+        text-align: center;
+      }
+      @media screen and (min-width: 640px) {
+        .flex-container {
+          display: flex;
+        }
+        .cotent {
+          flex: 1;
+        }
+        .sidebar {
+          flex: 0 1 300px;
+        }
+      }
+      .wrapper {
+        margin: auto;
+        max-width: rem-calc(1200);
+      }
+      .menu {
+        background-color: #313b3d;
+        padding: 10px;
+      }
+      .menu ul li {
+        display: inline;
+        margin-right: 4%;
+      }
+      .beside {
+        display: flex;
+      }
+      .subset {
+        padding: 20px;
+        flex: 1;
+      }
+      .subset2 {
+        padding: 20px;
+        flex: 1;
+      }
+      .vl {
+        border-left: 2px solid white;
+        height: 400px;
+      }
+      .vl_header {
+        border-left: 2px solid white;
+
+        display: inline;
+        margin-right: 20px;
+      }
+      button {
+        padding: 10px;
+      }
+      textarea {
+        width: 75%;
+        height: 300px;
+      }
+      form {
+        border: 2px gold solid;
+        padding: 15px;
+        border-radius: 3%;
+      }
+    </style>
+  </head>
+  <body>
+    <!--starting main-->
+    <main class="main">
+      <!--starting header-->
+      <header class="header">
+        <img src="header.PNG" alt="headerImage" width="100%" />
+      </header>
+
+      <div class="menu">
+        <ul>
+          <li>Home</li>
+          <div class="vl_header"></div>
+          <li>Contact</li>
+          <div class="vl_header"></div>
+          <li>New page1</li>
+          <div class="vl_header"></div>
+          <li>New page2</li>
+          <div class="vl_header"></div>
+          <li>New page3</li>
+          <div class="vl_header"></div>
+          <li>New page4</li>
+        </ul>
+      </div>
+      <div class="flex-container wrapper">
+        <!--side menu-->
+        <aside class="sidebar">
+          <h1>Main Menu</h1>
+          <ul>
+            <li>New Item 1</li>
+            <li>New Item 2</li>
+            <li>New Item 3</li>
+            <li>New Item 4</li>
+            <li>New Item 5</li>
+            <li>New Item 6</li>
+            <li>New Item 7</li>
+            <li>New Item 8</li>
+            <li>New Item 9</li>
+            <br />
+            <h1>Block</h1>
+            <p>Enter Block conteny here..</p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
+              modi illo soluta necessitatibus, sequi molestiae architecto
+            </p>
+          </ul>
+        </aside>
+        <section class="content">
+          <h1>Gallery</h1>
+          <hr />
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+            eaque aperiam saepe possimus doloribus sequi iusto, asperiores
+            nobis, quaerat dicta quae molestiae voluptates repellendus, ipsum
+            numquam sunt voluptatum porro minus. Lorem ipsum dolor sit, amet
+            consectetur adipisicing elit. Odit suscipit natus eaque dolores rem
+            velit veritatis. Aperiam nulla numquam rem nobis, obcaecati autem
+            veniam? Odit asperiores molestiae eos perspiciatis labore! Lorem
+            ipsum dolor, sit amet consectetur adipisicing elit. Velit eaque
+            aperiam saepe possimus doloribus sequi iusto, asperiores nobis,
+            quaerat dicta quae molestiae voluptates repellendus, ipsum numquam
+            sunt voluptatum porro minus. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Odit suscipit natus eaque dolores rem velit
+            veritatis. Aperiam nulla numquam rem nobis, obcaecati autem veniam?
+            Odit asperiores molestiae eos perspiciatis labore! Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Velit eaque aperiam
+            saepe possimus doloribus sequi iusto, asperiores nobis, quaerat
+            dicta quae molestiae voluptates repellendus, ipsum numquam sunt
+            voluptatum porro minus. Lorem ipsum dolor sit, amet consectetur
+            adipisicing elit. Odit suscipit natus eaque dolores rem velit
+            veritatis. Aperiam nulla numquam rem nobis, obcaecati autem veniam?
+            Odit asperiores molestiae eos perspiciatis labore!
+            <br /><br />
+          </p>
+          <div class="beside">
+            <div class="subset">
+              <h1>Subscription</h1>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+                vero porro quidem laboriosam voluptatem minus totam ex velit
+                sint? Rerum sequi nam maiores dignissimos cumque, similique in
+                aspernatur nobis nisi! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Quibusdam odio blanditiis nihil sequi itaque
+                et at nisi est omnis suscipit, porro debitis alias natus nam,
+                rerum, atque soluta dolor molestiae?
+              </p>
+              <button>Read more</button>
+            </div>
+            <div class="vl"></div>
+            <div class="subset2">
+              <h1>Other Services</h1>
+              <br />
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id
+                vero porro quidem laboriosam voluptatem minus totam ex velit
+                sint? Rerum sequi nam maiores dignissimos cumque, similique in
+                aspernatur nobis nisi! Lorem ipsum dolor, sit amet consectetur
+                adipisicing elit. Quibusdam odio blanditiis nihil sequi itaque
+                et at nisi est omnis suscipit, porro debitis alias natus nam,
+                rerum, atque soluta dolor molestiae?
+              </p>
+              <button>Read more</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <!--ContactForm-->
+      <h1>Contact Form:</h1>
+      <form>
+        Your E-mail:<br />
+        <input
+          type="email"
+          name="email"
+          placeholder="Enter Your Email"
+        /><br /><br />
+
+        Message:<br />
+        <textarea name="message" placeholder="Type Your Message"></textarea>
+        <br /><br />
+        <button>Send us message</button>
+      </form>
+      <br />
+      <!--starting footer-->
+      <footer class="footer">
+        <hr />
+        <p>Copyright &#169; 2014.</p>
+      </footer>
+    </main>
+  </body>
+</html>
