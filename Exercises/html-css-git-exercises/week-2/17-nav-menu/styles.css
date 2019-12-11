@@ -1,1 +1,40 @@
 /* Write your media queries and flexbox CSS below */
+*{
+    font-size: 14px;
+} 
+.site-header{
+    display: flex;
+    flex-direction: row; 
+}
+@media all and (min-width : 0px){
+    .site-header{
+       flex-direction:column; 
+    }
+    .site-header__checkout{
+        align-self: flex-start;
+    }
+}
+@media all and (min-width : 480px){
+    .site-header{
+        align-items: flex-start;
+        flex-direction: row;
+    }
+    .site-header__nav{
+        display: flex;
+        flex-direction: row; 
+        
+    }
+   
+} 
+@media all and (min-width : 858px){
+    .site-header__nav{
+        display: flex;
+        flex-direction: row;
+    }
+   .site-header{
+       column-gap: 27%;
+   }
+   /* .site-header__logo{justify-content: left;}
+   .site-header__nav{justify-content: center;}
+   .site-header__checkout{justify-content: right}
+} */
