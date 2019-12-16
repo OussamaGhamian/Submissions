@@ -115,9 +115,10 @@ header h2 {
     margin-right: 35px;
   }
   #contact {
-    position: relative;
-    top: -1100px;
-    left: 295px;
+    position: absolute;
+    top: -5px;
+    right: -30px;
+    order: -1;
   }
   .contacts {
     width: 450px;
