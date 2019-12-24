@@ -1,10 +1,10 @@
-var arr = document.querySelectorAll("img");
-arr.forEach(function(item) {
-  item.addEventListener("mouseover", function() {
-    var i;
-    var j = 1;
-    for (i = 0; i < document.querySelectorAll("img").length; i++) {
-      document.querySelectorAll("img")[i].src = "images/image" + j++ + "_2.jpg";
-    }
-  });
-});
+const images = document.querySelectorAll("img");
+
+const imageSwitcher = () => {
+  for (let i = 0; i < 5; i++) {
+    images[i].addEventListener("mouseover", () => {
+      images[i].src = "images/image" + (i + 1) + "_2.jpg";
+    });
+  }
+};
+imageSwitcher();

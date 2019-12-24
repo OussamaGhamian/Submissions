@@ -23,7 +23,7 @@
             <tr>
               <td>
                 <div class="shopping-basket__product">
-                  <img src="/images/20-shirts.jpg" alt="Codi t-shirts in black" />
+                  <img src="/images/22/shirts.jpg" alt="Codi t-shirts in black" />
                   <p>Codi t-shirt, black</p>
                 </div>
               </td>
@@ -39,6 +39,20 @@
           <form method="GET" id="checkout-form" class="checkout__form">
             <!-- Add the form fields here -->
 
+            <fieldset name="Billing address">
+              <legend>Billing Address</legend>
+              <label>Address Line 1<input type="text" name="Address Line 1"/></label>
+              <label>Address Line 2<input type="text" name="Address Line 2"/></label>
+              <label>Postcode<input type="text" name="Postcode"/></label>
+              <label>city<input type="text" name="city"/></label>
+            </fieldset>
+            <fieldset name="Delivery address">
+              <legend>Delivery Address</legend>
+              <label>Address Line 1<input type="text" name="'Address Line 1"/></label>
+              <label>Address Line 2<input type="text" name="'Address Line 2"/></label>
+              <label>Postcode<input type="text" name="'Postcode"/></label>
+              <label>city<input type="text" name="'city"/></label>
+            </fieldset>
             <button type="submit">Complete Purchase</button>
           </form>
         </div>
