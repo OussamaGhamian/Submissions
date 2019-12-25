@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Drums by OussamaGh</title>
+  </head>
+  <body>
+    <main>
+      <div id="drums">
+        <img src="assets/img/drum-kit.png" />
+        <img id="hatMove" src="assets/img/hihat-top.png" />
+        <img id="crashMove" src="assets/img/crash.png" />
+      </div>
+      <div id="control">
+        <div class="buttonRow">
+          <button onclick="crash()">E</button>
+          <p>Crash</p>
+          <audio id="crash" src="assets/audio/crash.wav"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="ride()">R</button>
+          <p>Ride</p>
+          <audio id="ride" src="assets/audio/ride.wav"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="floorTom()">F</button>
+          <p>Floor tom</p>
+          <audio id="floorTom" src="assets/audio/floor_tom.wav"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="midTom()">G</button>
+          <p>Mid tom</p>
+          <audio id="midTom" src="assets/audio/mid_tom.wav"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="highTom()">H</button>
+          <p>High tom</p>
+          <audio id="highTom" src="assets/audio/high_tom.wav"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="kick()">V</button>
+          <button onclick="kick()">B</button>
+          <audio id="kick" src="assets/audio/kick.wav"></audio>
+          <p>Kick</p>
+        </div>
+        <div class="buttonRow">
+          <button onclick="snare()">J</button>
+          <p>Snare</p>
+          <audio id="snare" src="assets/audio/snare.wav"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="hitHatOpen()">I</button>
+          <p>Hit-Hat open</p>
+          <audio id="hitHatOpen" src="assets/audio/hi_open.WAV"></audio>
+        </div>
+        <div class="buttonRow">
+          <button onclick="hitHatClosed()">k</button>
+          <p>Hit-Hat closed</p>
+          <audio id="hitHatClosed" src="assets/audio/hi_closed.wav"></audio>
+        </div>
+      </div>
+    </main>
+    <script src="playDrums.js"></script>
+  </body>
+</html>

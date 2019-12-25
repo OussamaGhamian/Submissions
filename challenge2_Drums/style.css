@@ -1,0 +1,81 @@
+/*Gnrl style*/
+body {
+  color: white;
+  background-color: black;
+}
+/*drumKit section style*/
+#drums > img {
+  width: 66%;
+  height: 620px;
+  float: left;
+  background-color: white;
+}
+/*control panel style*/
+#control {
+  display: flex;
+  flex-direction: column;
+}
+.buttonRow {
+  display: flex;
+}
+p {
+  margin: 20px;
+  font-weight: bolder;
+}
+button {
+  margin-left: 20px;
+  margin-top: 5px;
+  background-color: silver;
+  border: 3px solid darkgray;
+  width: 75px;
+}
+/*positioning*/
+#drums :nth-child(2) {
+  height: 8%;
+  width: 18%;
+  position: absolute;
+  top: 31%;
+  left: 42%;
+}
+#drums :nth-child(3) {
+  height: 8%;
+  width: 18%;
+  position: absolute;
+  top: 25%;
+  left: 7.5%;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
