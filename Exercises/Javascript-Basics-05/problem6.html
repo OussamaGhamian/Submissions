@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>js5.6</title>
+  </head>
+
+  <body>
+    <input type="text" />
+    <script>
+      let val = document.querySelector("input");
+      val.addEventListener("change", _ => {
+        let res = "";
+        for (let i = 1; i < 13; i++) res += i * val.value + " ";
+        alert(res);
+      });
+    </script>
+  </body>
+</html>
