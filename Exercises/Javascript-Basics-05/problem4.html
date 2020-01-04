@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>js5.4</title>
+  </head>
+
+  <body>
+    <input type="text" />
+    <script>
+      document.querySelector("input").addEventListener("change", () => {
+        let val = parseInt(document.querySelector("input").value);
+        let sum = 0;
+        for (val; val > 0; val--) {
+          if (val % 3 == 0 || val % 5 == 0) sum += val;
+        }
+        alert(sum);
+      });
+    </script>
+  </body>
+</html>
