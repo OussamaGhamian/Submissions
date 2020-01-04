@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>js5.7</title>
+  </head>
+
+  <body>
+    <script>
+      let res = "";
+      for (let i = 2; i < 31; i++) {
+        let counter = 0;
+        for (let j = 2; j <= i / 2; j++) {
+          if (i % j == 0) counter++;
+        }
+        if (counter == 0) res += i + " ";
+      }
+      alert(res);
+    </script>
+  </body>
+</html>
