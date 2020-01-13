@@ -1,6 +1,6 @@
 .app {
   height: 100vh;
-  max-width: 95.8vw;
+  /* max-width: 95.8vw; */
   transition: background-color 1s ease-in;
   box-sizing: border-box;
 }

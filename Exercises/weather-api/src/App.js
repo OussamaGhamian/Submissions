@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 import "./App.css";
-import cloudy from "./img/weather-icons/cloudy.svg";
+// import cloudy from "./img/weather-icons/cloudy.svg";
+import Search from "./search.js";
+import Current from "./current.js";
+import Future from "./future";
 
 class App extends Component {
   constructor(props) {
@@ -10,63 +13,76 @@ class App extends Component {
 
   render() {
     return (
-      // <>
+      <>
+        <div className="app">
+          <header className="app__header">
+            <Search />
+          </header>
+          <main className="app__main">
+            <Current />
+            <section className="futureWeather">
+              <Future />
+              <Future />
+              <Future />
+              <Future />
+              <Future />
+              <Future />
+              <Future />
+              <Future />
+            </section>
+          </main>
+        </div>
+      </>
       //   <div className="app">
-      //   <header className="app__header">
-
-      //   </header>
+      //     <header className="app__header">
+      //       <input type="text" name="" id="city" placeholder="Type a city name" />
+      //       <input type="button" value="FIND WEATHER" id="btnSearch" />
+      //     </header>
+      //     <main className="app__main">
+      //       <section className="currentWeather">
+      //         <img src={cloudy} alt="cloudyicon" />
+      //         <p id="white">Overcast clouds</p>
+      //         <p>
+      //           <span>Temperature</span> 10 to 11&#x2103;
+      //         </p>
+      //         <p>
+      //           <span>Humidity </span>78%<span> Pressure </span>1008.84
+      //         </p>
+      //       </section>
+      //       <section className="futureWeather">
+      //         <section>
+      //           <p>03:00</p>
+      //           <img src={cloudy} alt="cloudyicon" />
+      //           <p>8 &#12444;</p>
+      //         </section>
+      //         <section>
+      //           <p>03:00</p>
+      //           <img src={cloudy} alt="cloudyicon" />
+      //           <p>8 &#12444;</p>
+      //         </section>
+      //         <section>
+      //           <p>03:00</p>
+      //           <img src={cloudy} alt="cloudyicon" />
+      //           <p>8 &#12444;</p>
+      //         </section>
+      //         <section>
+      //           <p>03:00</p>
+      //           <img src={cloudy} alt="cloudyicon" />
+      //           <p>8 &#12444;</p>
+      //         </section>
+      //         <section>
+      //           <p>03:00</p>
+      //           <img src={cloudy} alt="cloudyicon" />
+      //           <p>8 &#12444;</p>
+      //         </section>
+      //         <section>
+      //           <p>03:00</p>
+      //           <img src={cloudy} alt="cloudyicon" />
+      //           <p>8 &#12444;</p>
+      //         </section>
+      //       </section>
+      //     </main>
       //   </div>
-      // </>
-      <div className="app">
-        <header className="app__header">
-          <input type="text" name="" id="city" placeholder="Type a city name" />
-          <input type="button" value="FIND WEATHER" id="btnSearch" />
-        </header>
-        <main className="app__main">
-          <section className="currentWeather">
-            <img src={cloudy} alt="cloudyicon" />
-            <p id="white">Overcast clouds</p>
-            <p>
-              <span>Temperature</span> 10 to 11&#x2103;
-            </p>
-            <p>
-              <span>Humidity </span>78%<span> Pressure </span>1008.84
-            </p>
-          </section>
-          <section className="futureWeather">
-            <section>
-              <p>03:00</p>
-              <img src={cloudy} alt="cloudyicon" />
-              <p>8 &#12444;</p>
-            </section>
-            <section>
-              <p>03:00</p>
-              <img src={cloudy} alt="cloudyicon" />
-              <p>8 &#12444;</p>
-            </section>
-            <section>
-              <p>03:00</p>
-              <img src={cloudy} alt="cloudyicon" />
-              <p>8 &#12444;</p>
-            </section>
-            <section>
-              <p>03:00</p>
-              <img src={cloudy} alt="cloudyicon" />
-              <p>8 &#12444;</p>
-            </section>
-            <section>
-              <p>03:00</p>
-              <img src={cloudy} alt="cloudyicon" />
-              <p>8 &#12444;</p>
-            </section>
-            <section>
-              <p>03:00</p>
-              <img src={cloudy} alt="cloudyicon" />
-              <p>8 &#12444;</p>
-            </section>
-          </section>
-        </main>
-      </div>
     );
   }
 }
