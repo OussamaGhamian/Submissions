@@ -73,7 +73,10 @@ function quit() {
   process.exit();
 }
 
-//show all the available commands
+/**
+ *show all the available commands
+ *@returns {void}
+ */
 function help() {
   console.log(`quit: to end the app
 exit: to end the app
