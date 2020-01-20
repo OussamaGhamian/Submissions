@@ -58,6 +58,10 @@ function onDataReceived(text) {
     remove(text);
   } else if (text.startsWith("edit")) {
     edit(text);
+  } else if (text.startsWith("check")) {
+    un_check(text);
+  } else if (text.startsWith("uncheck")) {
+    un_check(text);
   } else {
     unknownCommand(text);
   }
@@ -174,6 +178,27 @@ function edit(text) {
     let content = "";
     for (let i = 2; i < task.length; i++) content += task[i] + " ";
     arr[index].text = content.trim();
+  }
+}
+/**
+ * check
+ */
+function un_check(text) {
+  let task = text.split(" ");
+  if (task[0] == "uncheck") {
+    if (task.length === 1) {
+      console.log("Error!");
+    } else {
+      let index = parseInt(task[1]) - 1;
+      arr[index].done = false;
+    }
+  } else {
+    if (task.length === 1) {
+      console.log("Error!");
+    } else {
+      let index = parseInt(task[1]) - 1;
+      arr[index].done = true;
+    }
   }
 }
 // The following line starts the application
