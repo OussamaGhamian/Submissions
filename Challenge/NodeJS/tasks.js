@@ -34,8 +34,8 @@ function startApp(name) {
 function onDataReceived(text) {
   if (text === "quit\n" || text === "exit\n") {
     quit();
-  } else if (text === "hello\n") {
-    hello();
+  } else if (text.startsWith(`hello`)) {
+    hello(text.trim());
   } else if (text === "help\n") {
     help();
   } else {
@@ -56,11 +56,11 @@ function unknownCommand(c) {
 
 /**
  * Says hello
- *
+ * @param {string} text the text received
  * @returns {void}
  */
-function hello() {
-  console.log("hello!");
+function hello(text) {
+  console.log(`${text}!`);
 }
 
 /**
