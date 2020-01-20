@@ -133,12 +133,15 @@ function remove(text) {
     --arr.length;
   } else {
     let index = parseInt(task[1]) - 1;
-    arr[index] = "";
-    let temp;
-    for (let i = index; i < arr.length; ) {
-      arr[i] = arr[++i];
+    if (index > arr.length - 1) console.log("No task exists");
+    else {
+      arr[index] = "";
+      let temp;
+      for (let i = index; i < arr.length; ) {
+        arr[i] = arr[++i];
+      }
+      arr.length--;
     }
-    arr.length--;
   }
 }
 // The following line starts the application
