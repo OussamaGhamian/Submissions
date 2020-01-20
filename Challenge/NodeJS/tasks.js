@@ -1,3 +1,5 @@
+//creating a list stores the tasks
+let arr = ["doing NodeJs", "doing community project"];
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -38,6 +40,8 @@ function onDataReceived(text) {
     hello(text.trim());
   } else if (text === "help\n") {
     help();
+  } else if (text === "list\n") {
+    list();
   } else {
     unknownCommand(text);
   }
@@ -86,5 +90,13 @@ help: to show all available commands.
 `);
 }
 
+/**
+ *
+ */
+function list() {
+  arr.map((element, index) => {
+    console.log(`${++index} ${element}`);
+  });
+}
 // The following line starts the application
 startApp("Oussama AlGhamyan");
