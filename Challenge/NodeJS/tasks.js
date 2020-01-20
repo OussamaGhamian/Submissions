@@ -46,6 +46,8 @@ function onDataReceived(text) {
     add(text);
   } else if (text.startsWith("remove")) {
     remove(text);
+  } else if (text.startsWith("edit")) {
+    edit(text);
   } else {
     unknownCommand(text);
   }
@@ -142,6 +144,20 @@ function remove(text) {
       }
       arr.length--;
     }
+  }
+}
+/**
+ * edit
+ */
+function edit(text) {
+  let task = text.split(" ");
+  if (task.length === 1) {
+    console.log("Error!");
+  } else {
+    let index = parseInt(task[1]) - 1;
+    let content = "";
+    for (let i = index; i < task.length; i++) content += task[i] + " ";
+    arr[index] = content;
   }
 }
 // The following line starts the application
