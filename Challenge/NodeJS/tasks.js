@@ -103,13 +103,16 @@ function quit() {
  */
 function help() {
   console.log(`
-hello: enter any text starts with 'hello' word to output it with '!' symbol.
+hello:          enter any text starts with 'hello' 
+                word to output it with '!' symbol.
 quit:           to end the app.
 exit:           to end the app.
 help:           to show all available commands.
 add:            to add new a task.
 remove:         to remove the last task.
-remove '#task': to remove a specific task. 
+remove '#task': to remove a specific task.
+check:          to check the completed tasks.
+uncheck:        to uncheck the the checked tasks. 
 `);
 }
 
