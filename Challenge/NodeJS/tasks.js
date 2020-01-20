@@ -78,9 +78,12 @@ function quit() {
  *@returns {void}
  */
 function help() {
-  console.log(`quit: to end the app
-exit: to end the app
-help: to show all available commands`);
+  console.log(`
+hello: enter any text starts with 'hello' word to output it with '!' symbol.
+quit: to end the app.
+exit: to end the app.
+help: to show all available commands.
+`);
 }
 
 // The following line starts the application
