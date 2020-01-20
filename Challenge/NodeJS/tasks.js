@@ -1,5 +1,15 @@
 //creating a list stores the tasks
-let arr = ["doing NodeJs", "doing community project"];
+// let arr = ["doing NodeJs", "doing community project"];
+let arr = [
+  {
+    text: "Doing NodeJs",
+    done: true
+  },
+  {
+    text: "Doing community project",
+    done: false
+  }
+];
 /**
  * Starts the application
  * This is the function that is run when the app starts
@@ -105,7 +115,10 @@ remove '#task': to remove a specific task.
  */
 function list() {
   arr.map((element, index) => {
-    console.log(`${++index} ${element}`);
+    let dn = "[✔ ]";
+    let ndn = "[ ]";
+    if (element.done) console.log(`${++index} - ${dn} ${element.text}`);
+    else console.log(`${++index} - ${ndn}  ${element.text}`);
   });
 }
 /**
@@ -121,7 +134,10 @@ function add(text) {
     for (let i = 1; i < task.length; i++) {
       item += task[i] + " ";
     }
-    arr.push(item.trim());
+    arr.push({
+      text: item.trim(),
+      done: false
+    });
   }
 }
 /**
@@ -156,8 +172,8 @@ function edit(text) {
   } else {
     let index = parseInt(task[1]) - 1;
     let content = "";
-    for (let i = index; i < task.length; i++) content += task[i] + " ";
-    arr[index] = content;
+    for (let i = 2; i < task.length; i++) content += task[i] + " ";
+    arr[index].text = content.trim();
   }
 }
 // The following line starts the application
