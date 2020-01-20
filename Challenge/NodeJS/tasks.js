@@ -42,6 +42,10 @@ function onDataReceived(text) {
     help();
   } else if (text === "list\n") {
     list();
+  } else if (text.startsWith("add")) {
+    add(text);
+  } else if (text.startsWith("remove")) {
+    remove(text);
   } else {
     unknownCommand(text);
   }
@@ -84,19 +88,53 @@ function quit() {
 function help() {
   console.log(`
 hello: enter any text starts with 'hello' word to output it with '!' symbol.
-quit: to end the app.
-exit: to end the app.
-help: to show all available commands.
+quit:           to end the app.
+exit:           to end the app.
+help:           to show all available commands.
+add:            to add new a task.
+remove:         to remove the last task.
+remove '#task': to remove a specific task. 
 `);
 }
 
 /**
- *
+ *list
  */
 function list() {
   arr.map((element, index) => {
     console.log(`${++index} ${element}`);
   });
+}
+/**
+ * add
+ */
+function add(text) {
+  let task = text.split(" ");
+  if (task.length === 1) console.log("Err, no task to be added");
+  else {
+    let item = "";
+    for (let i = 1; i < task.length; i++) {
+      item += task[i] + " ";
+    }
+    arr.push(item.trim());
+  }
+}
+/**
+ * remove
+ */
+function remove(text) {
+  let task = text.split(" ");
+  if (task.length === 1) {
+    --arr.length;
+  } else {
+    let index = parseInt(task[1]) - 1;
+    arr[index] = "";
+    let temp;
+    for (let i = index; i < arr.length; ) {
+      arr[i] = arr[++i];
+    }
+    arr.length--;
+  }
 }
 // The following line starts the application
 startApp("Oussama AlGhamyan");
