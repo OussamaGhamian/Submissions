@@ -99,6 +99,7 @@ remove '#task': to remove a specific task.
 
 /**
  *list
+ *@returns {void}
  */
 function list() {
   arr.map((element, index) => {
@@ -107,6 +108,8 @@ function list() {
 }
 /**
  * add
+ * @returns {void}
+ * @param {text}
  */
 function add(text) {
   let task = text.split(" ");
@@ -121,6 +124,8 @@ function add(text) {
 }
 /**
  * remove
+ * @param {text}
+ * @returns {void}
  */
 function remove(text) {
   let task = text.split(" ");
