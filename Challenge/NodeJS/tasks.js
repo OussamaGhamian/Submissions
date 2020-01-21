@@ -1,16 +1,25 @@
 //creating a list stores the tasks
 // let arr = ["doing NodeJs", "doing community project"];
-let arr = [
-  {
-    text: "Doing NodeJs",
-    done: true
-  },
-  {
-    text: "Doing community project",
-    done: false
-  }
-];
+let arr = require("./DB.json");
+let comnds = process.argv;
+const fs = require("fs");
 /**
+ * read/write from a file
+ */
+// fs.readFile('./DB.json', 'utf8', (err, jsonString) => {
+//         if (err) {
+//             console.log("Error reading file from disk:", err)
+//             return
+//         }
+//         try {
+//             arr = JSON.parse(jsonString)
+//             console.log("read") // => "Customer address is: Infinity Loop Drive"
+//         } catch (err) {
+//             console.log('Error parsing JSON string:', err)
+//         }
+//     })
+/**
+ *
  * Starts the application
  * This is the function that is run when the app starts
  *
@@ -46,21 +55,21 @@ function startApp(name) {
 function onDataReceived(text) {
   if (text === "quit\n" || text === "exit\n") {
     quit();
-  } else if (text.startsWith(`hello`)) {
+  } else if (text.startsWith(`hello `)) {
     hello(text.trim());
   } else if (text === "help\n") {
     help();
   } else if (text === "list\n") {
     list();
-  } else if (text.startsWith("add")) {
+  } else if (text.startsWith("add ")) {
     add(text);
   } else if (text.startsWith("remove")) {
     remove(text);
-  } else if (text.startsWith("edit")) {
+  } else if (text.startsWith("edit ")) {
     edit(text);
-  } else if (text.startsWith("check")) {
+  } else if (text.startsWith("check ")) {
     un_check(text);
-  } else if (text.startsWith("uncheck")) {
+  } else if (text.startsWith("uncheck ")) {
     un_check(text);
   } else {
     unknownCommand(text);
@@ -93,6 +102,13 @@ function hello(text) {
  * @returns {void}
  */
 function quit() {
+  //write to DB.json
+  const jsonString = JSON.stringify(arr);
+  if (comnds[2] != null) {
+    console.log("creating a new file");
+    console.log(comnds[2]);
+    fs.writeFileSync(`./${comnds[2]}.json`, jsonString);
+  } else fs.writeFileSync("./DB.json", jsonString);
   console.log("Quitting now, goodbye!");
   process.exit();
 }
@@ -155,7 +171,7 @@ function add(text) {
 function remove(text) {
   let task = text.split(" ");
   if (task.length === 1) {
-    --arr.length;
+    arr.length--;
   } else {
     let index = parseInt(task[1]) - 1;
     if (index > arr.length - 1) console.log("No task exists");
