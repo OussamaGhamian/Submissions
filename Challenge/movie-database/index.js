@@ -9,13 +9,15 @@ const movies = [
   { title: "الإرهاب والكباب‎", year: 1992, rating: 6.2 }
 ];
 //ordered by arrays
+const originalArray = [];
+movies.map(element => originalArray.push(element));
 const sortedByDateArr = movies.sort((a, b) => b.year - a.year);
 const sortedByRatingArr = movies.sort((a, b) => b.rating - a.rating);
 const sortedByTitleArr = movies.sort((a, b) => b.title - a.title);
 //setup
 const express = require("express");
 const app = express();
-const port = "3034";
+const port = "3531";
 //routes
 app.get("/", (req, res) => {
   res.send("Hello World from Oussama");
@@ -65,6 +67,21 @@ app.get("/movies/read/by-title", (req, res) => {
     status: 200,
     data: `${sortedByRatingArr.map(item => `${item.title}`)}`
   });
+});
+app.get("/movies/read/id/:id", (req, res) => {
+  if (req.params.id > movies.length || req.params.id < 1) {
+    console.log("outside the range");
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie ${req.params.id} does not exist`
+    });
+  } else {
+    res.send({
+      status: 200,
+      data: `${originalArray[req.params.id - 1].title}`
+    });
+  }
 });
 app.get("/movies/update", (req, res) => {});
 app.get("/movies/delete", (req, res) => {});
