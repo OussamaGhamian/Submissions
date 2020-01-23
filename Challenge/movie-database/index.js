@@ -59,20 +59,22 @@ app.get("/movies/add", (req, res) => {
       message: "you cannot create a movie without providing a title and a year"
     });
   else {
-    movies.push({
+    originalArray.push({
       title: `${req.query.title}`,
       year: `${req.query.year}`,
       rating: `${req.query.rating}`
     });
     res.send({
       status: 200,
-      data: `${movies.map(item => `${item.title} ${item.year} ${item.rating}`)}`
+      data: `${originalArray.map(
+        item => `${item.title} ${item.year} ${item.rating}`
+      )}`
     });
   }
 });
 
 app.get("/movies/read", (req, res) => {
-  res.send({ status: 200, data: `${movies.map(item => item.title)}` });
+  res.send({ status: 200, data: `${originalArray.map(item => item.title)}` });
 });
 ///////
 app.get("/movies/read/by-date", (req, res) => {
@@ -111,7 +113,19 @@ app.get("/movies/read/id/:id", (req, res) => {
   }
 });
 app.get("/movies/update", (req, res) => {});
-app.get("/movies/delete", (req, res) => {});
+app.get("/movies/delete/:id", (req, res) => {
+  if (req.params.id > originalArray.length || req.params.id < 1) {
+    console.log(req.params.id);
+    res.send({
+      status: 404,
+      error: true,
+      message: `the movie ${req.params.id - 1} does not exist`
+    });
+  } else {
+    originalArray.splice(req.params.id - 1, 1);
+    res.send(originalArray);
+  }
+});
 app.listen(port, () => {
   console.log(`server is running at: http://localhost:${port}/`);
 });
