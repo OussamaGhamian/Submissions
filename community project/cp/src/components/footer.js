@@ -24,24 +24,28 @@ export default function Footer(porps) {
         <div>
           <label>SOCIAL MEDIA</label>
           <div class="social">
+            {/*eslint-disable-next-line*/}
             <a href="#">
-              <img src={fbIcn} alt="" />
+              <img src={fbIcn} alt="facebook" />
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
-              <img src={igIcn} alt="" srcset="" />
+              <img src={igIcn} alt="instagram" />
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
-              <img src={ytIcn} alt="" srcset="" />
+              <img src={ytIcn} alt="youtube" />
             </a>
+            {/*eslint-disable-next-line*/}
             <a href="#">
-              <img src={tyIcn} alt="" srcset="" />
+              <img src={tyIcn} alt="twitter" />
             </a>
           </div>
         </div>
       </div>
       <hr />
       <p>
-        Copyright &#169; 2010-2020 BobTech Company S.L. All rights reserved.
+        Copyright &#169; 2010-2020 BOBTech Company S.L. All rights reserved.
       </p>
     </footer>
   );

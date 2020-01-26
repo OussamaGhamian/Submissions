@@ -1,7 +1,7 @@
 import React from "react";
 import { Route, NavLink, HashRouter } from "react-router-dom";
 import Home from "./index";
-import Stuff from "./News";
+import News from "./News";
 import Contact from "./contactUs";
 import Footer from "./footer";
 
@@ -29,7 +29,7 @@ export default function Header() {
         </header>
         <div className="content">
           <Route path="/" exact component={Home} />
-          <Route path="/news" component={Stuff} />
+          <Route path="/news" component={News} />
           <Route path="/contact" component={Contact} />
         </div>
       </HashRouter>

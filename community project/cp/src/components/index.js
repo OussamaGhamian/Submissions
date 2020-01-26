@@ -10,7 +10,7 @@ export default function Main(props) {
   return (
     <main>
       <div id="hero">
-        <img src={hero} alt="hero " />
+        <img src={hero} alt="heroImg" />
       </div>
       <div id="intro">
         <article>
@@ -25,11 +25,11 @@ export default function Main(props) {
           We guide our students to choose the right major that fits them, we
           help them to discover their potential capabilities, ambitions, dreams
         </article>
-        <img src={students} alt="" />
+        <img src={students} alt="studentsImg" />
       </section>
       <h2>SUPPORT</h2>
       <section>
-        <img src={uniStdnt} alt="" />
+        <img src={uniStdnt} alt="studentsImg" />
         <article>
           we support our students with the required skills to be successful in
           their educational trip as well as in their future professions
@@ -42,11 +42,11 @@ export default function Main(props) {
           encouraging them to be good members in their communities throughout
           participating in multi volunteering works
         </article>
-        <img src={workshop} alt="" />
+        <img src={workshop} alt="workshopImg" />
       </section>
       <h2>ACHIEVE</h2>
       <section>
-        <img src={grad} alt=" " />
+        <img src={grad} alt="graduate students" />
         <article>
           Finally!! our students are prepared with the needed skills to be
           beneficial assets for their communities

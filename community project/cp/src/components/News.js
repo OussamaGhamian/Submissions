@@ -1,7 +1,6 @@
 import React from "react";
 
 import conf from "../img/conference.jpeg";
-import volunteer from "../img/volunteers.jpg";
 import join from "../img/joinTeam.jpeg";
 
 export default function News(props) {
@@ -16,7 +15,7 @@ export default function News(props) {
               Lebanese ministry of education
             </article>
           </section>
-          <img src={conf} alt="" />
+          <img src={conf} alt="news" />
         </div>
         <div>
           <section>
@@ -26,7 +25,7 @@ export default function News(props) {
               Lebanese ministry of education
             </article>
           </section>
-          <img src={join} alt="" />
+          <img src={join} alt="news" />
         </div>
         <div>
           <section>
@@ -36,21 +35,21 @@ export default function News(props) {
               Lebanese ministry of education
             </article>
           </section>
-          <img src={conf} alt="" />
+          <img src={conf} alt="news" />
         </div>
         <div>
           <section>
             <h3>HE conference</h3>
             <article>Establishing the first HE conference in the MENA</article>
           </section>
-          <img src={conf} alt="" />
+          <img src={conf} alt="news" />
         </div>
         <div>
           <section>
             <h3>HE conference</h3>
             <article>Establishing the first HE conference in the MENA</article>
           </section>
-          <img src={join} alt="" />
+          <img src={join} alt="news" />
         </div>
         <div>
           <section>
@@ -60,7 +59,7 @@ export default function News(props) {
               Lebanese ministry of education
             </article>
           </section>
-          <img src={conf} alt="" />
+          <img src={conf} alt="news" />
         </div>
       </div>
     </main>

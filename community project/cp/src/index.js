@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
+// eslint-disable-next-line
 import App from "./App";
 import Header from "./components/header";
 import * as serviceWorker from "./serviceWorker";
