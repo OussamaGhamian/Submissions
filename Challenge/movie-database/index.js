@@ -18,6 +18,10 @@ const sortedByTitleArr = movies.sort((a, b) => b.title - a.title);
 const express = require("express");
 const app = express();
 const port = "3531";
+//setup bodyParser
+const bodyParser = require("body-parser");
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 //routes
 app.get("/", (req, res) => {
   res.send("Hello World from Oussama");
@@ -44,25 +48,26 @@ app.get("/search", (req, res) => {
     });
 });
 
-app.get("/movies/add", (req, res) => {
-  if (!req.query.rating) req.query.rating = 4;
+app.post("/movies/add", (req, res) => {
+  if (!req.body.rating) req.body.rating = 4;
   if (
-    !req.query.title ||
-    !req.query.year ||
-    req.query.year < 1000 ||
-    req.query.year > 9999 ||
-    isNaN(req.query.year)
-  )
+    !req.body.title ||
+    !req.body.year ||
+    req.body.year < 1000 ||
+    req.body.year > 9999 ||
+    isNaN(req.body.year)
+  ) {
+    console.log(req.body.title);
     res.send({
       status: 403,
       error: true,
       message: "you cannot create a movie without providing a title and a year"
     });
-  else {
+  } else {
     originalArray.push({
-      title: `${req.query.title}`,
-      year: `${req.query.year}`,
-      rating: `${req.query.rating}`
+      title: `${req.body.title}`,
+      year: `${req.body.year}`,
+      rating: `${req.body.rating}`
     });
     res.send({
       status: 200,
@@ -112,11 +117,10 @@ app.get("/movies/read/id/:id", (req, res) => {
     });
   }
 });
-app.get("/movies/update/:id", (req, res) => {
-  if (req.query.title) originalArray[req.params.id - 1].title = req.query.title;
-  if (req.query.year) originalArray[req.params.id - 1].year = req.query.year;
-  if (req.query.rating)
-    originalArray[req.params.id - 1].rating = req.query.rating;
+app.put("/movies/update/:id", (req, res) => {
+  if (req.body.title) originalArray[req.params.id - 1].title = req.body.title;
+  if (req.body.year) originalArray[req.params.id - 1].year = req.body.year;
+  if (req.body.rating) originalArray[req.body.id - 1].rating = req.body.rating;
   res.send(originalArray);
 });
 app.get("/movies/delete/:id", (req, res) => {

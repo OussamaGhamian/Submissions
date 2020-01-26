@@ -105,8 +105,6 @@ function quit() {
   //write to DB.json
   const jsonString = JSON.stringify(arr);
   if (comnds[2] != null) {
-    console.log("creating a new file");
-    console.log(comnds[2]);
     fs.writeFileSync(`./${comnds[2]}.json`, jsonString);
   } else fs.writeFileSync("./DB.json", jsonString);
   console.log("Quitting now, goodbye!");
