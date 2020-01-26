@@ -1,0 +1,337 @@
+/*general style*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-size: 20px;
+  line-height: 50px;
+}
+
+/*index style*/
+
+/*news and event style*/
+
+.news {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 150px;
+}
+
+main .news > div {
+  margin-top: 50px;
+}
+
+.news div {
+  width: 46%;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    rgba(30, 87, 153, 1) 0%,
+    rgba(125, 185, 232, 0) 100%
+  );
+}
+
+.news :nth-child(odd) {
+  border-bottom-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.news :nth-child(even) {
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+.news div img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-left: auto;
+}
+
+.news div section {
+  display: flex;
+  flex-direction: column;
+}
+
+.news div section article {
+  min-width: 100%;
+  background-color: transparent;
+}
+
+.news div section h3 {
+  color: white;
+  background-color: transparent;
+}
+
+/*contactUs*/
+
+.contact {
+  display: flex;
+}
+
+.contact .contactForm {
+  color: #052077;
+  margin-right: 20px;
+}
+
+.contactForm input,
+.contactForm textarea {
+  border-radius: 10px;
+  margin-bottom: 50px;
+  border: 1px solid white;
+  border-top: 3px solid #052077;
+  border-bottom: 3px solid #052077;
+}
+
+.contactForm label {
+  display: block;
+  margin-bottom: 30px;
+}
+
+.contactForm :last-child {
+  width: 100%;
+  background-color: #052077;
+  color: white;
+  border: none;
+}
+
+main .contact .sideImg {
+  width: 100%;
+  margin-right: -397px;
+  align-self: center;
+}
+
+@media only screen and (max-width: 1100px) {
+  main .news {
+    flex-direction: row;
+    margin-top: 150px;
+  }
+  main .news div {
+    min-width: 100%;
+  }
+  main .news #top {
+    margin-top: 150px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .sideImg {
+    display: none;
+  }
+  nav ul,
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  main {
+    margin-top: 150px;
+  }
+  * {
+    font-size: 18px;
+  }
+  main #intro article {
+    width: 100%;
+  }
+  .contactForm h2 {
+    margin-top: 100px;
+  }
+  .contactForm {
+    padding: 10px;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  main .news div img {
+    height: 120px;
+    width: 120px;
+  }
+  main .news div section article {
+    font-size: 12px;
+  }
+  section {
+    flex-direction: column;
+    align-items: center;
+  }
+  main :nth-child(4),
+  main :nth-child(8) {
+    flex-direction: column-reverse;
+  }
+  main section article {
+    width: 100%;
+  }
+  main #intro article {
+    margin-top: 200px;
+    width: 100%;
+  }
+  main #hero img {
+    display: none;
+  }
+  footer div div .social {
+    grid-template-columns: 1fr;
+  }
+  footer div div a {
+    font-size: 18px;
+  }
+}
+
+/*header*/
+
+#hero {
+  display: flex;
+  justify-content: center;
+  margin-bottom: -100px;
+}
+
+#intro {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+#intro > article {
+  width: 50%;
+  font-weight: bolder;
+  color: #0c0041af;
+  font-size: 20px;
+}
+
+header nav {
+  background: linear-gradient(to bottom, #4f85bb 0%, #4f85bb 100%);
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  list-style-type: none;
+  width: 60%;
+  align-items: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav > span {
+  width: 40%;
+  text-align: center;
+  color: #052077;
+  font-size: 35px;
+  padding: 10px;
+}
+
+header nav ul:first-child {
+  color: red;
+}
+
+header {
+  border-top: 12px solid #356aa0;
+  border-bottom: 2px solid #356aa0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+ul li a:hover {
+  font-size: 23px;
+  transition: all 0.5s;
+  color: darkblue;
+}
+
+/*main*/
+
+main section {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main img {
+  margin-top: 50px;
+  width: 55%;
+}
+
+main article {
+  width: 45%;
+}
+
+main section article {
+  color: #0f3255ea;
+  padding: 30px;
+  align-self: center;
+  font-weight: bolder;
+}
+
+h2 {
+  margin-top: 70px;
+  padding: 15px;
+  font-size: 30px;
+  text-align: center;
+  color: #153758;
+}
+
+main :last-child {
+  justify-content: space-around;
+}
+
+#btn {
+  background-color: #052077;
+  color: white;
+  min-width: 300px;
+  border-radius: 20px;
+  outline: none;
+  border: none;
+  margin: 20px 0px;
+}
+
+/*footer*/
+
+footer {
+  border-top: 8px solid #356aa0;
+  border-bottom: 5px solid #356aa0;
+  color: #07203a;
+  background: linear-gradient(to bottom, #4f85bb 0%, #4f85bb 100%);
+  text-align: center;
+  padding: 20px 0px;
+  margin-top: 100px;
+}
+
+footer > div {
+  display: flex;
+  justify-content: space-around;
+}
+
+footer div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+footer div div a {
+  list-style-type: none;
+  text-decoration: none;
+  color: #0f3861;
+}
+
+.social {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+}
+
+.social a img {
+  height: 35px;
+  width: 35px;
+}
+
+footer hr {
+  margin: 15px 0px;
+  width: 100%;
+  color: #356aa0;
+}
